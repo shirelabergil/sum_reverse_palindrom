@@ -1,16 +1,10 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+num=int(input("enter 4 digit positive num"))
+if num>1000 or num<9999:
+    print(num%10+num%100//10+num%1000//100+num%10000//1000)
+    print(num%10*1000+num%100//10*100+num%1000//100*10+num%10000//1000)
+    if num%10+num%100//10==num%1000//100+num%10000//1000:
+        print("palindrom")
+    else:
+        print("no palindrom")
+else:
+    print("error! invalid value")
